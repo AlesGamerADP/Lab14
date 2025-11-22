@@ -2,6 +2,8 @@ import { MetadataRoute } from 'next';
 import { personalInfo } from '@/lib/data';
 
 export default function robots(): MetadataRoute.Robots {
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || personalInfo.siteUrl;
+  
   return {
     rules: [
       {
@@ -15,6 +17,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/', '/admin/'],
       },
     ],
-    sitemap: `${personalInfo.siteUrl}/sitemap.xml`,
+    sitemap: `${baseUrl}/sitemap.xml`,
   };
 }

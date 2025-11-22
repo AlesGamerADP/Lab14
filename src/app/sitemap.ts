@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { projects, personalInfo } from '@/lib/data';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = personalInfo.siteUrl;
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || personalInfo.siteUrl;
 
   // Páginas estáticas
   const staticPages: MetadataRoute.Sitemap = [
