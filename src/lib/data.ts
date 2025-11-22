@@ -33,7 +33,7 @@ export const projects: Project[] = [
 ];
 
 export const personalInfo = {
-  name: 'Tu Nombre',
+  name: 'Alessandro Davila Perez',
   title: 'Full Stack Developer',
   description: 'Desarrollador apasionado por crear experiencias web excepcionales',
   email: 'tu@email.com',
